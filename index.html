@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vittorelli Maison - Elegância em Ternos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Estilo geral */
+    body {
+      font-family: 'Playfair Display', serif;
+    }
+    /* Estilo do fundo de partículas */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #121212;
+      z-index: -1;
+    }
+    /* Animação de fade-in para seções */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    /* Animação de hover para cards e botões */
+    .card:hover, .whatsapp-btn:hover, .cta-btn:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+    /* Estilo do botão WhatsApp */
+    .whatsapp-btn {
+      background-color: #25D366;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    /* Estilo do botão CTA */
+    .cta-btn {
+      background-color: #4A1C1C;
+      color: #F5F5F5;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    /* Borda italiana estilizada */
+    .italian-border {
+      border: 2px solid;
+      border-image: linear-gradient(to right, #1A3C34 33%, #F5F5F5 33%, #F5F5F5 66%, #4A1C1C 66%) 1;
+      background: linear-gradient(45deg, rgba(210, 180, 140, 0.1), transparent);
+    }
+    /* Ajustes para telas pequenas */
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 1.75rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.75rem;
+      }
+      .italian-border {
+        border-width: 1px;
+      }
+      .card img {
+        height: 200px;
+      }
+      .whatsapp-btn, .cta-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+      }
+      .flex-col.sm\\:flex-row {
+        gap: 2;
+      }
+    }
+  </style>
+</head>
+<body class="text-white relative">
+  <!-- Fundo de partículas -->
+  <div id="particles-js"></div>
+
+  <!-- Cabeçalho -->
+  <header class="flex justify-center items-center h-20 bg-black bg-opacity-60 relative z-10 italian-border">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#F5F5F5]">Vittorelli <span class="italic text-[#B89778]">Maison</span></h1>
+  </header>
+
+  <!-- Seção Hero -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 animate-fade-in relative z-10">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 text-[#F5F5F5] italian-border inline-block p-1 sm:p-2">Elegância em Cada Detalhe</h2>
+    <p class="text-base sm:text-lg md:text-xl max-w-2xl mb-6 text-[#F5F5F5]">Ternos sob medida que unem tradição, sofisticação e modernidade. Vista a excelência com Vittorelli Maison.</p>
+    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
+      <a href="#contato" class="cta-btn">Entre em Contato</a>
+      <a href="https://wa.me/551112345678?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20ternos%20da%20Vittorelli%20Maison!" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i> Fale pelo WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Seção Produtos -->
+  <section class="py-12 sm:py-16 px-4 sm:px-6 animate-fade-in relative z-10 flex flex-col items-center">
+    <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#F5F5F5] italian-border inline-block p-1 sm:p-2">Nossos Ternos</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto w-full">
+      <!-- Card 1 -->
+      <div class="card bg-[#1A3C34] rounded-lg overflow-hidden shadow-lg italian-border">
+        <img src="https://via.placeholder.com/400x300?text=Terno+Clássico" alt="Terno Clássico" class="w-full h-48 sm:h-64 object-cover">
+        <div class="p-4 sm:p-6">
+          <h4 class="text-lg sm:text-xl font-semibold mb-2 text-[#F5F5F5]">Terno Clássico</h4>
+          <p class="text-sm sm:text-base text-[#F5F5F5] mb-4">Perfeito para ocasiões formais, com corte impecável e tecidos premium.</p>
+          <a href="https://wa.me/551112345678?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Terno%20Clássico!" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Saiba Mais
+          </a>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card bg-[#4A1C1C] rounded-lg overflow-hidden shadow-lg italian-border">
+        <img src="https://via.placeholder.com/400x300?text=Terno+Moderno" alt="Terno Moderno" class="w-full h-48 sm:h-64 object-cover">
+        <div class="p-4 sm:p-6">
+          <h4 class="text-lg sm:text-xl font-semibold mb-2 text-[#F5F5F5]">Terno Moderno</h4>
+          <p class="text-sm sm:text-base text-[#F5F5F5] mb-4">Estilo contemporâneo com detalhes únicos para destacar sua personalidade.</p>
+          <a href="https://wa.me/551112345678?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Terno%20Moderno!" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Saiba Mais
+          </a>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card bg-[#D2B48C] rounded-lg overflow-hidden shadow-lg italian-border">
+        <img src="https://via.placeholder.com/400x300?text=Terno+Sob+Medida" alt="Terno Sob Medida" class="w-full h-48 sm:h-64 object-cover">
+        <div class="p-4 sm:p-6">
+          <h4 class="text-lg sm:text-xl font-semibold mb-2 text-[#121212]">Terno Sob Medida</h4>
+          <p class="text-sm sm:text-base text-[#121212] mb-4">Personalização total para um caimento perfeito e exclusivo.</p>
+          <a href="https://wa.me/551112345678?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Terno%20Sob%20Medida!" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Saiba Mais
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato" class="py-12 sm:py-16 px-4 sm:px-6 bg-black bg-opacity-60 animate-fade-in relative z-10 italian-border">
+    <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#F5F5F5]">Entre em Contato</h3>
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-base sm:text-lg text-[#F5F5F5] mb-6">Agende uma consulta ou visite nossa loja para descobrir a arte de um terno perfeito.</p>
+      <p class="text-sm sm:text-base text-[#F5F5F5] mb-4">📍 Rua Fictícia, 123, São Paulo, SP</p>
+      <p class="text-sm sm:text-base text-[#F5F5F5] mb-4">📞 (11) 1234-5678</p>
+      <p class="text-sm sm:text-base text-[#F5F5F5] mb-6">📧 contato@vittorellimaison.com</p>
+      <div class="flex flex-col sm:flex-row justify-center space-x-0 sm:space-x-4 gap-2 sm:gap-4">
+        <a href="https://instagram.com/vittorellimaison" target="_blank" class="text-lg sm:text-xl text-[#F5F5F5] hover:text-[#B89778]"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://wa.me/551112345678?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20ternos%20da%20Vittorelli%20Maison!" target="_blank" class="whatsapp-btn">
+          <i class="fab fa-whatsapp"></i> Fale pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="py-6 text-center bg-black bg-opacity-60 relative z-10 italian-border">
+    <p class="text-sm sm:text-base text-[#F5F5F5]">© 2025 Vittorelli Maison. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script para partículas e animações -->
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <script>
+    // Inicializa Particles.js com cores italianas
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 120, density: { enable: true, value_area: 800 } },
+        color: { value: ['#1A3C34', '#4A1C1C', '#F5F5F5'] }, // Verde, vermelho, branco
+        shape: { type: 'circle', stroke: { width: 0 } },
+        opacity: { value: 0.8, random: true },
+        size: { value: 3.5, random: true },
+        line_linked: { enable: true, distance: 90, color: '#B89778', opacity: 0.7, width: 1.5 },
+        move: { enable: true, speed: 3.5, direction: 'none', random: true, straight: false, out_mode: 'out' }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { 
+          onhover: { enable: true, mode: ['grab', 'bubble'] }, 
+          onclick: { enable: true, mode: 'repulse' }, 
+          resize: true 
+        },
+        modes: { 
+          grab: { distance: 150, line_linked: { opacity: 0.9 } }, 
+          bubble: { distance: 250, size: 8, duration: 2, opacity: 0.9 },
+          repulse: { distance: 100 }
+        }
+      },
+      retina_detect: true
+    });
+
+    // Animação de fade-in ao carregar
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.animate-fade-in');
+      elements.forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.2}s`;
+      });
+    });
+  </script>
+</body>
+</html>
